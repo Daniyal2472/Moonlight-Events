@@ -1,0 +1,1478 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous" />
+
+  <link href="https://use.fontawesome.com/releases/v6.4.0/css/all.css" rel="stylesheet">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+    crossorigin="anonymous"></script>
+
+
+
+  <style>
+    #carousel {
+      width: 100%;
+      height: 85vh;
+      background-color: #231e1e;
+      border-radius: 20px;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    #carousel .carousel-inner {
+      height: 100%;
+      width: 100%;
+      background-color: #231e1e;
+      border-radius: 20px;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+    }
+
+
+    #Islam h2 {
+      margin-top: 10%;
+      font-size: 3rem;
+      color: #006400;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+
+    .card {
+      margin-top: 20px;
+    }
+
+    #Islam .card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 450px;
+      width: auto;
+      border-radius: 20px;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    #Islam img {
+      display: block;
+      width: 100%;
+      height: 85%;
+    }
+
+    #Islam .card-text {
+      width: 101%;
+      height: 85%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+    }
+
+    #Islam .card:hover {
+      background-color: black;
+      color: white;
+    }
+
+    #Islam .card:hover .card-text {
+      right: 0%;
+      opacity: 1;
+    }
+
+    #Christianity h2 {
+      margin-top: 10%;
+      font-size: 3rem;
+      color: #89CFF0;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+    #Christianity .card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 450px;
+      width: auto;
+      background-color: transparent;
+      border-radius: 20px;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    #Christianity img {
+      display: block;
+      width: 100%;
+      height: 85%;
+    }
+
+    #Christianity .card-text {
+      width: 101%;
+      height: 85%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+    }
+
+    #Christianity .card:hover {
+      background-color: #DAA520;
+    }
+
+    #Christianity .card:hover .card-text {
+      right: 0%;
+      opacity: 1;
+    }
+
+    #Hinduism h2 {
+      margin-top: 10%;
+      font-size: 3rem;
+      color: #FF8C00;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+
+    #Hinduism .card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 450px;
+      width: auto;
+      background-color: transparent;
+      border-radius: 20px;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    #Hinduism img {
+      display: block;
+      width: 100%;
+      height: 85%;
+    }
+
+    #Hinduism .card-text {
+      width: 101%;
+      height: 85%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+    }
+
+    #Hinduism .card:hover {
+      background-color: #CBA3D8;
+    }
+
+    #Hinduism .card:hover .card-text {
+      right: 0%;
+      opacity: 1;
+    }
+
+    #Judaism h2 {
+      margin-top: 10%;
+      font-size: 3rem;
+      color: #0000FF;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #Judaism .card {
+      border-radius: 20px;
+      overflow: hidden;
+      position: relative;
+      height: 450px;
+      width: auto;
+      background-color: transparent;
+      border-radius: 20px;
+      box-shadow: 0 50px 50px rgba(0, 0, 0, 0.3);
+    }
+
+    #Judaism img {
+      display: block;
+      width: 100%;
+      height: 85%;
+    }
+
+    #Judaism .card-text {
+      width: 101%;
+      height: 85%;
+      top: 0;
+      right: -100%;
+      position: absolute;
+      backdrop-filter: blur(5px);
+      padding: 30px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      text-align: center;
+      transition: 0.2s;
+      color: white;
+      background-color: rgba(0, 0, 0, 0.75);
+      opacity: 0;
+    }
+
+    #Judaism .card:hover {
+      background-color: #FF8C00;
+    }
+
+    #Judaism .card:hover .card-text {
+      right: 0%;
+      opacity: 1;
+    }
+
+    #Pakisan h2 {
+      margin-top: 10%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      background: -webkit-linear-gradient(green, white);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    #Pakisan .countries-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    #Pakisan .card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #Pakisan .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    #Pakisan .card:hover img {
+      transform: scale(1.1);
+    }
+
+    #Pakisan .card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #Pakisan .card:hover .overlay {
+      opacity: 1;
+    }
+
+    #Pakisan .card .overlay-text {
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      #Pakisan .countries-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #India h2 {
+      margin-top: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      background: -webkit-linear-gradient(#FF9933, #138808);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    #India .countries-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    #India .card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #India .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    #India .card:hover img {
+      transform: scale(1.1);
+    }
+
+    #India .card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #India .card:hover .overlay {
+      opacity: 1;
+    }
+
+    #India .card .overlay-text {
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      #India .countries-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #America h2 {
+      margin-top: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      background: -webkit-linear-gradient(#B22234, #3C3B6E);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+
+
+    }
+
+    #America .countries-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    #America .card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #America .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    #America .card:hover img {
+      transform: scale(1.1);
+    }
+
+    #America .card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #America .card:hover .overlay {
+      opacity: 1;
+    }
+
+    #America .card .overlay-text {
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      #America .countries-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #China h2 {
+      margin-top: 5%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 48px;
+      background: -webkit-linear-gradient(#FF0000, #FFD700);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    }
+
+    #China .countries-container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      padding: 20px;
+    }
+
+    #China .card {
+      position: relative;
+      width: 100%;
+      height: 300px;
+      overflow: hidden;
+      border: 1px solid #ddd;
+      border-radius: 5px;
+    }
+
+    #China .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.3s ease;
+    }
+
+    #China .card:hover img {
+      transform: scale(1.1);
+    }
+
+    #China .card .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(0, 0, 0, 0.7);
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    #China .card:hover .overlay {
+      opacity: 1;
+    }
+
+    #China .card .overlay-text {
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+    }
+
+    @media (max-width: 768px) {
+      #China .countries-container {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    #gallery h2 {
+      font-size: 2.5rem;
+      color: #ff9900;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      margin-bottom: 20px;
+    }
+
+    #gallery {
+      overflow: auto;
+      white-space: nowrap;
+      padding-top: 60px;
+    }
+
+    #gallery img {
+      height: 400px;
+      width: 400px;
+      padding: 10px;
+    }
+
+    .back-to-top {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      z-index: 100;
+      display: none;
+    }
+
+    .scroll-to-top-button {
+      display: none;
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: 40px;
+      height: 40px;
+      border: none;
+      border-radius: 50%;
+      color: black;
+      font-size: 20px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .scroll-to-top-button i {
+      margin-top: 2px;
+    }
+
+    .scroll-to-top-button:hover {
+      background: linear-gradient(to right, blue, black);
+      color: white;
+    }
+
+    .navbar {
+      height: auto;
+      padding: 10px 0; 
+      position: fixed; 
+      width: 100%; 
+      z-index: 999;
+    }
+
+    .navbar-brand {
+      background: linear-gradient(to right, blue, black);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      text-decoration: none;
+    }
+
+    .navbar-brand i {
+      margin-left: 5px;
+    }
+
+    .navbar-nav {
+      margin-left: auto;
+    }
+
+    .nav-item {
+      position: relative;
+    }
+
+
+    .nav-link::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -1px;
+      width: 0;
+      height: 2px;
+      background: linear-gradient(to right, blue, black);
+      transition: all 0.3s ease;
+    }
+
+
+
+    .nav-link:hover::after {
+      width: 100%;
+    }
+
+    .dropdown-menu {
+      box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    }
+
+    .dropdown-item {
+      padding: 10px 16px; 
+      text-decoration: none;
+      display: block; 
+    }
+
+    .dropdown-item:hover,
+    .dropdown-item:focus {
+      color: white;
+      background: linear-gradient(to right, blue, black);
+      transition: all 0.2s ease;
+    }
+
+    #visitorCount {
+      color: linear-gradient(to right, blue, black);
+      margin-left: 10px;
+    }
+
+    .btn.btn-light {
+      align-self: center;
+      overflow: hidden;
+      white-space: nowrap;
+      width: 49px;
+      transition: 0.3s all;
+    }
+
+    .btn.btn-light:hover {
+      width: 100px;
+      background: linear-gradient(to right, blue, black);
+      color: white;
+    }
+
+    #contact .btn{
+      border: 1px solid black;
+      color: black;
+    }
+
+    #contact .btn:hover{
+      background: linear-gradient(to right, blue, black);
+      color: white;
+      transition: all 0.2s;
+    }
+
+
+  </style>
+</head>
+
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="MOONLIGHT EVENTS2.html">MOONLIGHT <i class="fa-solid fa-moon fa-lg"></i> EVENTS</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#navbarNav"><i class="fa-solid fa-house  fa-xs"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact"><i class="fa-solid fa-phone fa-xs"></i> Contact Us</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Religions
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#Islam">Islam</a></li>
+              <li><a class="dropdown-item" href="#Christianity">Christianity</a></li>
+              <li><a class="dropdown-item" href="#Judaism">Judaism</a></li>
+              <li><a class="dropdown-item" href="#Hinduism">Hinduism</a></li>
+              <hr class="dropdown-divider">
+              <li><a class="dropdown-item" href="#gallery">Gallery</a></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown Menu
+            </a>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#Pakisan">Pakisan</a></li>
+              <li><a class="dropdown-item" href="#India">India</a></li>
+              <li><a class="dropdown-item" href="#America">America</a></li>
+              <li><a class="dropdown-item" href="#China">China</a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <i class="fa-solid fa-users fa-lg"></i>
+      <span id="visitorCount">0</span>
+    </div>
+  </nav>
+
+  <div id="carousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="https://www.seafireresortandspa.com/images/1700-960/beach-event-b6d030da.jpg" class="d-block w-100"
+          alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.seafireresortandspa.com/images/1700-960/019-ballroom-crecent-rounds-2359-329ed0b8.jpg"
+          class="d-block w-100" alt="..." />
+      </div>
+      <div class="carousel-item">
+        <img src="https://www.seafireresortandspa.com/images/1700-960/003-ballroom-classroom-3-5012-dd31d3c1.jpg"
+          class="d-block w-100" alt="..." />
+      </div>
+    </div>
+  </div>
+
+  <div id="Islam">
+    <div class="container-fluid text-center">
+      <h2>Islam <i class="fa-solid fa-kaaba fa-2xl"></i></h2>
+    </div>
+    <div class="container-fluid align-items-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/eid ul fitr.jpg" class="card-img-top" alt="Image 1" />
+            <div class="card-body">
+              <h5 class="card-title">Eid al-Fitr</h5>
+              <p class="card-text">
+                Eid al-Fitr means “the feast of breaking the fast.” The fast,
+                in this instance, is Ramadan, which recalls the revealing of
+                the Quran to Prophet Muhammad and requires Muslims to fast
+                from sunrise to sundown for a month.
+                <a href="pdfs/fitr.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/eid al adha.jpg" class="card-img-top" alt="Image 2" />
+            <div class="card-body">
+              <h5 class="card-title">Eid al-Adha</h5>
+              <p class="card-text">
+                Eid al-Adha is a significant Muslim holiday that honors
+                Ibrahim's obedience to God by sacrificing his son. It
+                concludes the Hajj pilgrimage and involves communal prayers,
+                animal sacrifices, sharing of meat, acts of charity, and
+                personal reflection.
+                <a href="pdfs/adha.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/320px-Masjid_Nabawi_The_Prophet_s_Mosque,_Madina.jpg" class="card-img-top" alt="Image 3" />
+            <div class="card-body">
+              <h5 class="card-title">Mawlid</h5>
+              <p class="card-text">
+                Mawlid, also known as Mawlid al-Nabi, is a significant
+                observance in Islam that commemorates the birth of the Prophet
+                Muhammad.
+                <a href="pdfs/MAWLID.docx" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Christianity">
+    <div class="container-fluid text-center">
+      <h2>Christianity <i class="fa-solid fa-cross fa-2xl"></i></h2>
+    </div>
+    <div class="container-fluid align-items-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img
+              src="https://images.pexels.com/photos/3444345/pexels-photo-3444345.png?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              class="card-img-top" alt="Image 1" />
+            <div class="card-body">
+              <h5 class="card-title">Christmas</h5>
+              <p class="card-text">
+                Celebrated on December 25th, Christmas commemorates the birth
+                of Jesus Christ. It is a widely celebrated festival that
+                includes traditions such as exchanging gifts, decorating
+                Christmas trees, attending church services, and gathering with
+                family and friends.
+                <a href="pdfs/CHRISTMAS.docx" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/b/b2/Resurrection_%2824%29.jpg"
+              class="card-img-top" alt="Image 2" />
+            <div class="card-body">
+              <h5 class="card-title">Easter</h5>
+              <p class="card-text">
+                Easter is observed in the spring and celebrates the
+                resurrection of Jesus Christ from the dead, as described in
+                the New Testament. It is a significant festival in
+                Christianity, marked by church services, the Easter Vigil, the
+                Stations of the Cross, and the tradition of decorating and
+                hunting for Easter eggs.
+                <a href="pdfs/EASTER.docx" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/33/W%C3%BCger_Kreuzigung.jpg/320px-W%C3%BCger_Kreuzigung.jpg"
+              class="card-img-top" alt="Image 3" />
+            <div class="card-body">
+              <h5 class="card-title">Good Friday</h5>
+              <p class="card-text">
+                Good Friday is observed on the Friday before Easter Sunday and
+                commemorates the crucifixion of Jesus Christ. It is a solemn
+                day of remembrance and is often marked by fasting, prayer, and
+                attending church services focused on Christ's sacrifice.
+                <a href="pdfs/GOODFRIDAY.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Hinduism">
+    <div class="container-fluid text-center">
+      <h2>Hinduism <i class="fa-solid fa-gopuram fa-2xl"></i></h2>
+    </div>
+    <div class="container-fluid align-items-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/diwali.jpg" class="card-img-top" alt="Image 1" />
+            <div class="card-body">
+              <h5 class="card-title">Diwali (Deepavali)</h5>
+              <p class="card-text">
+                Diwali is one of the most widely celebrated Hindu festivals.
+                It signifies the victory of light over darkness and good over
+                evil. People decorate their homes with lights, burst
+                firecrackers, exchange gifts, and offer prayers to deities.
+                <a href="pdfs/DEEWALI.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img
+              src="https://images.pexels.com/photos/4134548/pexels-photo-4134548.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+              class="card-img-top" alt="Image 2" />
+            <div class="card-body">
+              <h5 class="card-title">Holi</h5>
+              <p class="card-text">
+                Known as the festival of colors, Holi is celebrated with
+                enthusiasm and joy. Participants throw colored powders and
+                water at each other, dance, sing, and indulge in festive
+                treats. Holi marks the arrival of spring and is associated
+                with the divine love of Lord Krishna.
+                <a href="pdfs/HOLI.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/Raksha Bandhan.jpg" class="card-img-top" alt="Image 3" />
+            <div class="card-body">
+              <h5 class="card-title">Raksha Bandhan</h5>
+              <p class="card-text">
+                Raksha Bandhan is a festival that celebrates the bond between
+                brothers and sisters. Sisters tie a protective thread (rakhi)
+                around their brothers' wrists, and in return, brothers give
+                gifts and promise to protect their sisters. It is a symbol of
+                love, care, and mutual respect.
+                <a href="pdfs/RAKSHA BANDHAN.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Judaism">
+    <div class="container-fluid text-center">
+      <h2>Judaism <i class="fa-solid fa-star-of-david fa-2xl"></i></h2>
+    </div>
+    <div class="container-fluid align-items-center">
+      <div class="row">
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/Passover (Pesach).jpg" class="card-img-top" alt="Image 1" />
+            <div class="card-body">
+              <h5 class="card-title">Passover (Pesach)</h5>
+              <p class="card-text">
+                Passover commemorates the liberation of the Israelites from
+                slavery in ancient Egypt. It is celebrated with a festive meal
+                called the Seder, during which the story of the Exodus is
+                retold. Matzah (unleavened bread) is eaten to symbolize the
+                haste in which the Israelites left Egypt.
+                <a href="pdfs/PASSOVER (PESACH) .pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/Rosh Hashanah.jpg" class="card-img-top" alt="Image 2" />
+            <div class="card-body">
+              <h5 class="card-title">Rosh Hashanah</h5>
+              <p class="card-text">
+                Rosh Hashanah is the Jewish New Year. It is a time for
+                reflection, repentance, and prayer. The shofar (ram's horn) is
+                blown to signify the start of the High Holy Days. Special
+                prayers and festive meals are held, and it is customary to eat
+                symbolic foods such as apples dipped in honey for a sweet
+                year.
+                <a href="pdfs/ROSH HASHANAH .pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-4">
+          <div class="card">
+            <img src="images/Hanukkah.jpg" class="card-img-top" alt="Image 3" />
+            <div class="card-body">
+              <h5 class="card-title">Hanukkah</h5>
+              <p class="card-text">
+                Hanukkah, also called the Festival of Lights, celebrates the
+                rededication of the Second Temple in Jerusalem. It lasts for
+                eight nights, during which candles are lit on a special
+                menorah (a nine-branched candelabrum). Traditional Hanukkah
+                foods like latkes (potato pancakes) and sufganiyot
+                (jelly-filled doughnuts) are enjoyed.
+                <a href="pdfs/HANUKKAH.pdf" target="_blank">
+                  <button type="button" class="btn btn-light">
+                    <i class="fa-solid fa-download fa-xl"></i>
+                  </button>
+                </a>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="Pakisan">
+    <h2>Pakistan</h2>
+    <div class="countries-container">
+      <div class="card">
+        <img
+          src="https://www.pakistantimes.com/topics/wp-content/uploads/2015/08/14th-august-pakistan-independence-day.jpg"
+          alt="Country 1" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Independence Day</h3>
+            <p>
+              Celebrated on August 14th each year, Pakistan commemorates its
+              independence from British rule in 1947.
+            </p>
+            <a href="pdfs/INDEPENDENCE DAY .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://dnd.com.pk/wp-content/uploads/2022/03/pakistan-day-sindh-announces-public-holiday-on-march-23-1616051976-9753.jpg"
+          alt="Country 2" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Pakistan Day</h3>
+            <p>
+              Celebrated on March 23rd, Pakistan Day marks the adoption of the
+              Lahore Resolution in 1940, which called for the creation of a
+              separate Muslim state in British India.
+            </p>
+            <a href="pdfs/PAKISTAN DAY .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://zameenblog.s3.amazonaws.com/blog/wp-content/uploads/2019/09/cover-image-b-1024x444.jpg"
+          alt="Country 3" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Defence Day</h3>
+            <p>
+              Defense Day is observed on September 6th to pay tribute to the
+              armed forces of Pakistan for their valor and sacrifices during
+              the Indo-Pakistani War of 1965.
+            </p>
+            <a href="pdfs/DEFENSE DAY .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/QGoio_QdVgM/maxresdefault.jpg" alt="Country 4" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Kashmir Solidarity Day</h3>
+            <p>
+              Kashmir Solidarity Day is observed on February 5th to express
+              solidarity with the people of Jammu and Kashmir and to support
+              their right to self-determination.
+            </p>
+            <a href="pdfs/KASHMIR DAY .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="India">
+    <h2>India</h2>
+    <div class="countries-container">
+      <div class="card">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/commons/2/29/A_still_of_Red_Fort%2C_during_the_62nd_Independence_Day_celebrations%2C_in_Delhi_on_August_15%2C_2008.jpg"
+          alt="Country 1" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Independence Day</h3>
+            <p>
+              Celebrated on August 15th, it marks the day when India gained independence from British rule in 1947.
+            </p>
+            <a href="pdfs/INDIA INDEPENDENCE .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://static.toiimg.com/thumb/msid-73582319,imgsize-92668,width-400,resizemode-4/73582319.jpg"
+          alt="Country 2" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Republic Day</h3>
+            <p>
+              Observed on January 26th, it commemorates the adoption of the Indian Constitution in 1950, which
+              established India as a republic.
+            </p>
+            <a href="pdfs/REPUBLIC DAY .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/6/6d/Kargil_war.jpg" alt="Country 3" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Kargil War (1999)</h3>
+            <p>
+              The Kargil War took place between May and July 1999 in the Kargil district of Jammu and Kashmir, India. It
+              was a conflict between India and Pakistan, with Pakistani forces infiltrating into Indian-controlled
+              territory.
+            </p>
+            <a href="pdfs/KARGILWAR .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://i.ytimg.com/vi/NcAh6rf6-84/maxresdefault.jpg" alt="Country 4" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Surgical Strike (2016)</h3>
+            <p>
+              In response to a terrorist attack on an Indian Army base in Uri, Jammu and Kashmir, the Indian military
+              conducted surgical strikes on terrorist launch pads across the Line of Control (LoC). The strikes involved
+              targeted military operations against terrorist infrastructure and aimed to send a strong message against
+              cross-border terrorism. These surgical strikes marked a significant shift in India's approach to dealing
+              with terrorist threats.
+            </p>
+            <a href="pdfs/SURGICAL STRIKE .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="America">
+    <h2>America</h2>
+    <div class="countries-container">
+      <div class="card">
+        <img
+          src="https://assets.editorial.aetnd.com/uploads/2009/12/topic-july-4-gettyimages-815196336.jpg?width=1920&height=960&crop=1920%3A960%2Csmart&quality=75"
+          alt="Country 1" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Independence Day (July 4th)</h3>
+            <p>
+              Independence Day is a federal holiday commemorating the adoption of the Declaration of Independence on
+              July 4, 1776. It marks the day when the thirteen American colonies declared their independence from
+              British rule. Independence Day is celebrated with parades, fireworks, picnics, barbecues, and various
+              patriotic festivities throughout the country.
+            </p>
+            <a href="pdfs/INDEPENDENCE DAY JULY 4 .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://static.independent.co.uk/s3fs-public/thumbnails/image/2018/11/14/15/gettyimages-134034262.jpg"
+          alt="Country 2" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Thanksgiving</h3>
+            <p>
+              Thanksgiving is a national holiday celebrated on the fourth Thursday in November. It originated as a
+              harvest festival and is a time for people to express gratitude for the blessings in their lives. Families
+              and friends gather for a traditional Thanksgiving meal that typically includes turkey, stuffing, cranberry
+              sauce, and pumpkin pie.
+            </p>
+            <a href="pdfs/THANKSGVING .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/1/1d/P20210120CK-1111_%2850912592147%29.jpg"
+          alt="Country 3" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Presidential Inauguration</h3>
+            <p>
+              The Presidential Inauguration is a significant event that takes place every four years when a new
+              President of the United States is sworn into office. The inauguration ceremony, held on January 20th,
+              marks the peaceful transfer of power from one administration to the next. It includes the President-elect
+              taking the oath of office, a public address, and various celebrations in Washington, D.C.
+            </p>
+            <a href="pdfs/PRESIDENTAL .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://hoteleastlund.com/wp-content/uploads/2017/03/mlkjr.jpg" alt="Country 4" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Martin Luther King Jr. Day</h3>
+            <p>
+              Martin Luther King Jr. Day is a federal holiday observed on the third Monday in January. It honors the
+              civil rights leader, Dr. Martin Luther King Jr., and his contributions to the civil rights movement in the
+              United States. The day is marked by various events, including parades, volunteer activities, and speeches
+              promoting equality and social justice.
+            </p>
+            <a href="pdfs/MARTIN .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="China">
+    <h2>China</h2>
+    <div class="countries-container">
+      <div class="card">
+        <img src="https://cdn.britannica.com/45/195645-050-C2BA680A/parade-Chinese-New-Year-Los-Angeles.jpg"
+          alt="Country 1" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Spring Festival (Chinese New Year)</h3>
+            <p>
+              The Spring Festival, also known as Chinese New Year, is the most important traditional festival in China.
+              It marks the beginning of the lunar calendar year and typically falls between January and February. The
+              celebration lasts for 15 days and is characterized by family gatherings, feasts, fireworks, lion and
+              dragon dances, red decorations, and the exchange of gifts and red envelopes (hongbao).
+            </p>
+            <a href="pdfs/SPRING FESTIVAL.pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://cdn.britannica.com/69/145569-050-7FAF1CC0/lanterns-Lantern-Festival-China-Shanghai.jpg"
+          alt="Country 2" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Lantern Festival</h3>
+            <p>
+              The Lantern Festival is celebrated on the 15th day of the lunar calendar's first month, which marks the
+              end of the Spring Festival. People light and hang lanterns, participate in lantern parades, solve riddles
+              written on lanterns, and enjoy various cultural performances. The festival is also known for its stunning
+              displays of colorful lanterns, particularly in places like Pingxi and Zigong.
+            </p>
+            <a href="pdfs/LATERN FESTIVAL .pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img
+          src="https://www.hongkongfoodietours.com/wp-content/uploads/2019/05/dragon-boat-racing-tuen-ng-festival.jpg"
+          alt="Country 3" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Dragon Boat Festival</h3>
+            <p>
+              The Dragon Boat Festival, also known as Duanwu Festival, is held on the 5th day of the 5th month of the
+              lunar calendar, usually falling in June. It commemorates the ancient poet Qu Yuan and includes dragon boat
+              races, where teams paddle in long boats decorated like dragons. The festival also features the consumption
+              of zongzi (sticky rice dumplings wrapped in bamboo leaves) and the hanging of herbal sachets to ward off
+              evil spirits.
+            </p>
+            <a href="pdfs/DRAGON BOAT FESTIVAL.pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/d/d5/Mid-Autumn_Festival-beijing.jpg"
+          alt="Country 4" />
+        <div class="overlay">
+          <div class="overlay-text">
+            <h3>Mid-Autumn Festival</h3>
+            <p>
+              The Mid-Autumn Festival, also called the Moon Festival, is observed on the 15th day of the 8th month of
+              the lunar calendar, typically in September or October. It celebrates the harvest season and the full moon.
+              Families gather to admire the moon, light lanterns, and share mooncakes, a traditional pastry filled with
+              sweet bean paste or lotus seed paste. The festival is also associated with folklore and stories about the
+              moon.
+            </p>
+            <a href="pdfs/MID AUTUMN FESTIVAL.pdf" target="_blank">
+              <button type="button" class="btn btn-light">
+                <i class="fa-solid fa-download fa-xl"></i>
+              </button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="gallery">
+    <h2 class="text-center">Gallery</h2>
+    <div class="gallery scroll-container">
+      <img src="images/Christmas.jpg" alt="Cinque Terre" />
+      <img src="images/diwali.jpg" alt="Forest" />
+      <img src="images/Easter.jpg" alt="Northern Lights" />
+      <img src="images/eid al adha.jpg" alt="Mountains" />
+      <img src="images/eid ul fitr.jpg" alt="Mountains" />
+      <img src="images/Hanukkah.jpg" alt="Mountains" />
+      <img src="images/Passover (Pesach).jpg" alt="Mountains" />
+    </div>
+  </div>
+
+  <br /><br />
+
+  <div class="container" id="contact">
+    <footer class="py-5">
+      <div class="row">
+        <div class="col-6" style="text-align: center;">
+          <h5>Contact Us</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">moonlight.events@example.com</a>
+            </li>
+            <li class="nav-item mb-2">
+              <a href="#" class="nav-link p-0 text-muted">+92 123 4567890</a>
+            </li>
+            <li>
+              <div id="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14480.30654813651!2d67.073539!3d24.861232!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3eb33ea3dcaf47d9%3A0xe7ec8bb05b628158!2sFranchise%20Support%20Office%20-%20Aptech%20Learning!5e0!3m2!1sen!2sus!4v1687107031547!5m2!1sen!2sus" width="500px" height="300px" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </div>
+            </li>
+          </ul>
+        </div>
+  
+        <div class="col-4 offset-1">
+          <form>
+            <h5>Feedback</h5>
+            <div class="w-100 gap-2">
+              <label for="newsletter1" class="visually-hidden">Email address</label>
+              <input id="newsletter1" type="text" class="form-control" placeholder="Email address">
+              <br>
+              <label for="newsletter1" class="visually-hidden">Your valuable words</label>
+              <textarea placeholder="Enter your feedback here" class="form-control"></textarea>
+              <br>
+              <button class="btn" type="button">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </footer>
+  
+
+      <div class="d-flex justify-content-between py-4 my-4 border-top">
+        <p>© 2023 MOONLIGHT <i class="fa-solid fa-moon fa-sm"></i> EVENTS, Inc. All rights reserved.</p>
+        <ul class="list-unstyled d-flex">
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#twitter"><i class="fa-brands fa-twitter fa-2xl" style="color: #1DA1F2;"></i></i></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#instagram"><i class="fa-brands fa-instagram fa-2xl"></i></use>
+              </svg></a></li>
+          <li class="ms-3"><a class="link-dark" href="#"><svg class="bi" width="24" height="24">
+                <use xlink:href="#facebook"><i class="fa-brands fa-facebook fa-2xl" style="color: #1877F2;"></i></use>
+              </svg></a></li>
+        </ul>
+      </div>
+    </footer>
+  </div>
+
+
+  <button id="scrollToTopButton" class="scroll-to-top-button" title="Scroll to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      var scrollToTopButton = document.getElementById('scrollToTopButton');
+
+      if (window.pageYOffset > 100) {
+        scrollToTopButton.style.display = 'block';
+      } else {
+        scrollToTopButton.style.display = 'none';
+      }
+    });
+
+    function scrollToTop() {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    var scrollToTopButton = document.getElementById('scrollToTopButton');
+    scrollToTopButton.addEventListener('click', scrollToTop);
+
+
+    // visitor count
+    var visitorCount = localStorage.getItem('visitorCount');
+
+    if (!visitorCount) {
+      visitorCount = 0;
+    }
+
+    visitorCount++;
+
+
+    localStorage.setItem('visitorCount', visitorCount);
+
+
+    document.getElementById('visitorCount').textContent = visitorCount;
+  </script>
+</body>
+</html>
